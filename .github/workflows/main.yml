@@ -1,4 +1,4 @@
-name: Build Nametag Plugin
+name: Upload plugin jar
 
 on:
   push:
@@ -24,7 +24,7 @@ jobs:
         run: ./gradlew build
 
       - name: Upload plugin jar
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: NametagPlugin
           path: build/libs/*.jar
