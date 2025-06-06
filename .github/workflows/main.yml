@@ -1,4 +1,4 @@
-name: Upload plugin jar
+name: Build Nametag Plugin
 
 on:
   push:
@@ -16,6 +16,9 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '21'
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x ./gradlew
 
       - name: Set up Gradle
         uses: gradle/gradle-build-action@v2
